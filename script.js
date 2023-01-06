@@ -16,10 +16,11 @@ var pass = '';
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
+// Generate Password
 function generatePassword() {
   console.log("hello")
 
+// Start of pop-up quesitons
 length = window.prompt("How many letters would you like? :)");
 
   while (length < 8 || length > 128 || isNaN(length) || length === null ) {
@@ -50,8 +51,9 @@ length = window.prompt("How many letters would you like? :)");
   }
 console.log(password);
 
+// Alert when no characters are choosen
   while (UC === false && lc === false && num === false && SC === false) {
-    alert("Choose at least one character?");
+    alert("Choose at least one character.");
     UC = window.confirm("Would you like UPPERCASE letters?");
     lc = window.confirm("Would you like lowercase letters?");
     num = window.confirm("Would you like numbers?");
@@ -70,6 +72,7 @@ console.log(password);
     }
   }
    
+//For loop for generated password
    randomPassword = '';  
        for (var i = 0; i < length; i++) {
     pass = password.charAt(Math.floor(Math.random() * password.length));
